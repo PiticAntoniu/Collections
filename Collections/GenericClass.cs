@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Collections
 {
-    class GenericClass
+    class GenericClass<Tip>
     {
-        int a;
-        int b;
+        Tip a;
+        Tip b;
 
-        public GenericClass(int a = 0, int b = 0)
+        public GenericClass(Tip a, Tip b)
         {
             this.a = a;
             this.b = b;
         }
 
-        public int Sum()
+        public double Sum()
         {
-            return a + b;
+            return Convert.ToDouble(a) + Convert.ToDouble(b);
         }
     }
 }
