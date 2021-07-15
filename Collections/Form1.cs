@@ -106,12 +106,12 @@ namespace Collections
         {
             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            foreach (int elem in a.Where(f))
+            foreach (int elem in a.Where( x => x % 2 == 0))
             {
                 Console.WriteLine(elem);
             }
 
-            foreach (int elem in a.Where(Prim))
+            foreach (int elem in a.Where( x => Prim(x)))
             {
                 Console.WriteLine(elem);
             }
@@ -128,9 +128,5 @@ namespace Collections
             return true;
         }
 
-        private bool f(int arg)
-        {
-            return arg % 2 == 0;
-        }
     }
 }
