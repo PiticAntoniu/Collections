@@ -68,36 +68,39 @@ namespace Collections
         {
             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            foreach (int x in a.OrderByDescending( arg => arg )) // f
+            foreach (int x in a.OrderByDescending( x => x )) // f
             {
                 Console.WriteLine(x);
             }
-        }
-
-        private object f(int arg)
-        {
-            return arg;
         }
 
         private void orderByOnStudentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Student[] students = new Student[]
             {
-                new Student{Nume="Toni", Nota = 5},
+                new Student{Nume="Ana", Nota = 5},
                 new Student{Nume="Ana", Nota = 9},
                 new Student{Nume="Dorel", Nota = 2},
-                new Student{Nume="Popescu", Nota = 7}
+                new Student{Nume="Dorel", Nota = 7}
             };
 
-            foreach (Student student in students.OrderBy( arg => arg.Nume )) // g
+            foreach (Student student in students.OrderBy( x => x.Nume )) 
             {
                 Console.WriteLine(student.Nume + " " + student.Nota);
             }
+
+            foreach (Student student in students.OrderByDescending(x => x.Nota)) 
+            {
+                Console.WriteLine(student.Nume + " " + student.Nota);
+            }
+
+            var sortedStudents = students.OrderBy(x => x.Nota).OrderByDescending(x => x.Nume);
+            foreach (Student student in sortedStudents) 
+            {
+                Console.WriteLine(student.Nume + " " + student.Nota);
+            }
+
         }
 
-        private object g(Student arg)
-        {
-            return arg.Nume;
-        }
     }
 }
