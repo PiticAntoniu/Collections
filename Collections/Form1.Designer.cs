@@ -41,13 +41,17 @@ namespace Collections
             this.ex1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ex2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ex3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.averageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mediaCelorDeAnul2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // testButton
             // 
             this.testButton.Location = new System.Drawing.Point(249, 413);
-            this.testButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.testButton.Margin = new System.Windows.Forms.Padding(2);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(88, 45);
             this.testButton.TabIndex = 0;
@@ -58,7 +62,7 @@ namespace Collections
             // colletionsTestButton
             // 
             this.colletionsTestButton.Location = new System.Drawing.Point(370, 413);
-            this.colletionsTestButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.colletionsTestButton.Margin = new System.Windows.Forms.Padding(2);
             this.colletionsTestButton.Name = "colletionsTestButton";
             this.colletionsTestButton.Size = new System.Drawing.Size(75, 45);
             this.colletionsTestButton.TabIndex = 1;
@@ -70,7 +74,8 @@ namespace Collections
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.linqOnArraysToolStripMenuItem,
-            this.lInqOnListsToolStripMenuItem});
+            this.lInqOnListsToolStripMenuItem,
+            this.agregatesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(694, 24);
@@ -91,7 +96,7 @@ namespace Collections
             // orderByToolStripMenuItem
             // 
             this.orderByToolStripMenuItem.Name = "orderByToolStripMenuItem";
-            this.orderByToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.orderByToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.orderByToolStripMenuItem.Text = "OrderBy";
             this.orderByToolStripMenuItem.Click += new System.EventHandler(this.orderByToolStripMenuItem_Click);
             // 
@@ -129,23 +134,54 @@ namespace Collections
             // ex1ToolStripMenuItem
             // 
             this.ex1ToolStripMenuItem.Name = "ex1ToolStripMenuItem";
-            this.ex1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ex1ToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.ex1ToolStripMenuItem.Text = "Ex 1";
             this.ex1ToolStripMenuItem.Click += new System.EventHandler(this.ex1ToolStripMenuItem_Click);
             // 
             // ex2ToolStripMenuItem
             // 
             this.ex2ToolStripMenuItem.Name = "ex2ToolStripMenuItem";
-            this.ex2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ex2ToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.ex2ToolStripMenuItem.Text = "Ex 2";
             this.ex2ToolStripMenuItem.Click += new System.EventHandler(this.ex2ToolStripMenuItem_Click);
             // 
             // ex3ToolStripMenuItem
             // 
             this.ex3ToolStripMenuItem.Name = "ex3ToolStripMenuItem";
-            this.ex3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ex3ToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.ex3ToolStripMenuItem.Text = "Ex 3";
             this.ex3ToolStripMenuItem.Click += new System.EventHandler(this.ex3ToolStripMenuItem_Click);
+            // 
+            // agregatesToolStripMenuItem
+            // 
+            this.agregatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sumToolStripMenuItem,
+            this.averageToolStripMenuItem,
+            this.mediaCelorDeAnul2ToolStripMenuItem});
+            this.agregatesToolStripMenuItem.Name = "agregatesToolStripMenuItem";
+            this.agregatesToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.agregatesToolStripMenuItem.Text = "Agregates";
+            // 
+            // sumToolStripMenuItem
+            // 
+            this.sumToolStripMenuItem.Name = "sumToolStripMenuItem";
+            this.sumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sumToolStripMenuItem.Text = "Sum";
+            this.sumToolStripMenuItem.Click += new System.EventHandler(this.sumToolStripMenuItem_Click);
+            // 
+            // averageToolStripMenuItem
+            // 
+            this.averageToolStripMenuItem.Name = "averageToolStripMenuItem";
+            this.averageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.averageToolStripMenuItem.Text = "Average";
+            this.averageToolStripMenuItem.Click += new System.EventHandler(this.averageToolStripMenuItem_Click);
+            // 
+            // mediaCelorDeAnul2ToolStripMenuItem
+            // 
+            this.mediaCelorDeAnul2ToolStripMenuItem.Name = "mediaCelorDeAnul2ToolStripMenuItem";
+            this.mediaCelorDeAnul2ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.mediaCelorDeAnul2ToolStripMenuItem.Text = "Media celor de anul 2";
+            this.mediaCelorDeAnul2ToolStripMenuItem.Click += new System.EventHandler(this.mediaCelorDeAnul2ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -156,7 +192,7 @@ namespace Collections
             this.Controls.Add(this.testButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -180,6 +216,10 @@ namespace Collections
         private System.Windows.Forms.ToolStripMenuItem ex1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ex2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ex3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem averageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mediaCelorDeAnul2ToolStripMenuItem;
     }
 }
 

@@ -216,5 +216,48 @@ namespace Collections
                 Console.WriteLine(t);
             }
         }
+
+        private void sumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            Console.WriteLine(a.Sum());
+        }
+
+        private void averageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region generate mock data
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Nume = "Toni", Nota = 10, Grupa = "Prof" });
+            students.Add(new Student { Nume = "Toma", Nota = 4, Grupa = "221" });
+            students.Add(new Student { Nume = "Cretu", Nota = 5, Grupa = "222" });
+            students.Add(new Student { Nume = "Cretulescu", Nota = 3, Grupa = "221" });
+            students.Add(new Student { Nume = "Bondar", Nota = 7, Grupa = "411" });
+            students.Add(new Student { Nume = "Bolivar", Nota = 8, Grupa = "412" });
+            students.Add(new Student { Nume = "Tamas", Nota = 2, Grupa = "411" });
+            students.Add(new Student { Nume = "Joe", Nota = 3, Grupa = "311" });
+            students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
+            #endregion
+
+            Console.WriteLine(students.Average(x => x.Nota));
+        }
+
+        private void mediaCelorDeAnul2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region generate mock data
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Nume = "Toni", Nota = 5, Grupa = "Prof" });
+            students.Add(new Student { Nume = "Toma", Nota = 4, Grupa = "221" });
+            students.Add(new Student { Nume = "Cretu", Nota = 5, Grupa = "222" });
+            students.Add(new Student { Nume = "Cretulescu", Nota = 3, Grupa = "221" });
+            students.Add(new Student { Nume = "Bondar", Nota = 7, Grupa = "411" });
+            students.Add(new Student { Nume = "Bolivar", Nota = 8, Grupa = "412" });
+            students.Add(new Student { Nume = "Tamas", Nota = 2, Grupa = "411" });
+            students.Add(new Student { Nume = "Joe", Nota = 3, Grupa = "311" });
+            students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
+            #endregion
+
+            Console.WriteLine(  students.Where(x => x.Grupa.StartsWith("2")).Average(x=>x.Nota) );
+        }
     }
 }
