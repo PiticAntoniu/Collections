@@ -128,5 +128,27 @@ namespace Collections
             return true;
         }
 
+        private void filtersOnStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Student[] students = new Student[]
+{
+                new Student{Nume="Toni", Nota = 5, Grupa = "Prof"},
+                new Student{Nume="Ana", Nota = 9, Grupa = "221"},
+                new Student{Nume="Dorel", Nota = 2, Grupa = "221"},
+                new Student{Nume="Popescu", Nota = 7, Grupa = "221"}
+            };
+
+            foreach (Student st in students.Where(x => x.Nota >= 5))
+            {
+                Console.WriteLine(st.Nume + " " + st.Nota + "    grupa:" + st.Grupa);
+            }
+
+            foreach (Student st in students.Where(x => x.Nota >= 5 && x.Grupa != "Prof"))
+            {
+                Console.WriteLine(st.Nume + " " + st.Nota + "    grupa:" + st.Grupa);
+            }
+
+
+        }
     }
 }
