@@ -209,8 +209,7 @@ namespace Collections
             students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
             #endregion
 
-            var studentiRestantieri = students.Where(x => x.Nota < 5);
-            var studentiRestantieriDinAnul2 = studentiRestantieri.Where(x => x.Grupa.StartsWith("2"));
+            var studentiRestantieriDinAnul2 = students.Where(x => x.Nota < 5 && x.Grupa.StartsWith("2"));
 
             foreach (var t in studentiRestantieriDinAnul2.Select(x => x.Nume + " " + x.Grupa + "    Nota:" + x.Nota))
             {
