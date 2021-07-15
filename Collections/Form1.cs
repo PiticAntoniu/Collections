@@ -63,5 +63,41 @@ namespace Collections
             Collections t = new Collections();
             t.f();
         }
+
+        private void orderByToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            foreach (int x in a.OrderByDescending(f))
+            {
+                Console.WriteLine(x);
+            }
+        }
+
+        private object f(int arg)
+        {
+            return arg;
+        }
+
+        private void orderByOnStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Student[] students = new Student[]
+            {
+                new Student{Nume="Toni", Nota = 5},
+                new Student{Nume="Ana", Nota = 9},
+                new Student{Nume="Dorel", Nota = 2},
+                new Student{Nume="Popescu", Nota = 7}
+            };
+
+            foreach (Student student in students.OrderBy( g ))
+            {
+                Console.WriteLine(student.Nume + " " + student.Nota);
+            }
+        }
+
+        private object g(Student arg)
+        {
+            return arg.Nume;
+        }
     }
 }
