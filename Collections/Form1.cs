@@ -68,7 +68,7 @@ namespace Collections
         {
             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            foreach (int x in a.OrderByDescending(f))
+            foreach (int x in a.OrderByDescending( arg => arg )) // f
             {
                 Console.WriteLine(x);
             }
@@ -89,7 +89,7 @@ namespace Collections
                 new Student{Nume="Popescu", Nota = 7}
             };
 
-            foreach (Student student in students.OrderBy( g ))
+            foreach (Student student in students.OrderBy( arg => arg.Nume )) // g
             {
                 Console.WriteLine(student.Nume + " " + student.Nota);
             }
