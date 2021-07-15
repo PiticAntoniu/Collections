@@ -150,5 +150,73 @@ namespace Collections
 
 
         }
+
+        private void ex1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region generate mock data
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Nume = "Toni", Nota = 5, Grupa = "Prof" });
+            students.Add(new Student { Nume = "Toma", Nota = 4, Grupa = "221" });
+            students.Add(new Student { Nume = "Cretu", Nota = 5, Grupa = "222" });
+            students.Add(new Student { Nume = "Cretulescu", Nota = 3, Grupa = "221" });
+            students.Add(new Student { Nume = "Bondar", Nota = 7, Grupa = "411" });
+            students.Add(new Student { Nume = "Bolivar", Nota = 8, Grupa = "412" });
+            students.Add(new Student { Nume = "Tamas", Nota = 2, Grupa = "411" });
+            students.Add(new Student { Nume = "Joe", Nota = 3, Grupa = "311" });
+            students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
+            #endregion
+
+            foreach (var t in students.OrderBy(x=>x.Nota))
+            {
+                Console.WriteLine(t.Nume + "-" + t.Nota);
+            }
+        }
+
+        private void ex2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region generate mock data
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Nume = "Toni", Nota = 5, Grupa = "Prof" });
+            students.Add(new Student { Nume = "Toma", Nota = 4, Grupa = "221" });
+            students.Add(new Student { Nume = "Cretu", Nota = 5, Grupa = "222" });
+            students.Add(new Student { Nume = "Cretulescu", Nota = 3, Grupa = "221" });
+            students.Add(new Student { Nume = "Bondar", Nota = 7, Grupa = "411" });
+            students.Add(new Student { Nume = "Bolivar", Nota = 8, Grupa = "412" });
+            students.Add(new Student { Nume = "Tamas", Nota = 2, Grupa = "411" });
+            students.Add(new Student { Nume = "Joe", Nota = 3, Grupa = "311" });
+            students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
+            #endregion
+
+            foreach (var t in students.OrderBy(x => x.Nota).Select(FormatedStudent))
+            {
+                Console.WriteLine(t);
+            }
+        }
+
+        private string FormatedStudent(Student arg)
+        {
+            return arg.Nume + " " + arg.Grupa + "    Nota:" + arg.Nota;
+        }
+
+        private void ex3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            #region generate mock data
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Nume = "Toni", Nota = 5, Grupa = "Prof" });
+            students.Add(new Student { Nume = "Toma", Nota = 4, Grupa = "221" });
+            students.Add(new Student { Nume = "Cretu", Nota = 5, Grupa = "222" });
+            students.Add(new Student { Nume = "Cretulescu", Nota = 3, Grupa = "221" });
+            students.Add(new Student { Nume = "Bondar", Nota = 7, Grupa = "411" });
+            students.Add(new Student { Nume = "Bolivar", Nota = 8, Grupa = "412" });
+            students.Add(new Student { Nume = "Tamas", Nota = 2, Grupa = "411" });
+            students.Add(new Student { Nume = "Joe", Nota = 3, Grupa = "311" });
+            students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
+            #endregion
+
+            foreach (var t in students.OrderBy(x => x.Nota).Select(FormatedStudent))
+            {
+                Console.WriteLine(t);
+            }
+        }
     }
 }

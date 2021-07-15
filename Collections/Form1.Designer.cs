@@ -37,6 +37,10 @@ namespace Collections
             this.orderByOnStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtersOnStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lInqOnListsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ex1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ex2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ex3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +69,8 @@ namespace Collections
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.linqOnArraysToolStripMenuItem});
+            this.linqOnArraysToolStripMenuItem,
+            this.lInqOnListsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(694, 24);
@@ -111,6 +116,37 @@ namespace Collections
             this.filtersOnStudentsToolStripMenuItem.Text = "Filters on students";
             this.filtersOnStudentsToolStripMenuItem.Click += new System.EventHandler(this.filtersOnStudentsToolStripMenuItem_Click);
             // 
+            // lInqOnListsToolStripMenuItem
+            // 
+            this.lInqOnListsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ex1ToolStripMenuItem,
+            this.ex2ToolStripMenuItem,
+            this.ex3ToolStripMenuItem});
+            this.lInqOnListsToolStripMenuItem.Name = "lInqOnListsToolStripMenuItem";
+            this.lInqOnListsToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.lInqOnListsToolStripMenuItem.Text = "LInq on lists";
+            // 
+            // ex1ToolStripMenuItem
+            // 
+            this.ex1ToolStripMenuItem.Name = "ex1ToolStripMenuItem";
+            this.ex1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ex1ToolStripMenuItem.Text = "Ex 1";
+            this.ex1ToolStripMenuItem.Click += new System.EventHandler(this.ex1ToolStripMenuItem_Click);
+            // 
+            // ex2ToolStripMenuItem
+            // 
+            this.ex2ToolStripMenuItem.Name = "ex2ToolStripMenuItem";
+            this.ex2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ex2ToolStripMenuItem.Text = "Ex 2";
+            this.ex2ToolStripMenuItem.Click += new System.EventHandler(this.ex2ToolStripMenuItem_Click);
+            // 
+            // ex3ToolStripMenuItem
+            // 
+            this.ex3ToolStripMenuItem.Name = "ex3ToolStripMenuItem";
+            this.ex3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ex3ToolStripMenuItem.Text = "Ex 3";
+            this.ex3ToolStripMenuItem.Click += new System.EventHandler(this.ex3ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,6 +176,10 @@ namespace Collections
         private System.Windows.Forms.ToolStripMenuItem orderByOnStudentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtersOnStudentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lInqOnListsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ex1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ex2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ex3ToolStripMenuItem;
     }
 }
 
