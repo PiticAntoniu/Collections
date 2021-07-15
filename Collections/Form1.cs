@@ -187,16 +187,12 @@ namespace Collections
             students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
             #endregion
 
-            foreach (var t in students.OrderBy(x => x.Nota).Select(FormatedStudent))
+            foreach (var t in students.OrderBy(x => x.Nota).Select(x => x.Nume + " " + x.Grupa + "    Nota:" + x.Nota))
             {
                 Console.WriteLine(t);
             }
         }
 
-        private string FormatedStudent(Student arg)
-        {
-            return arg.Nume + " " + arg.Grupa + "    Nota:" + arg.Nota;
-        }
 
         private void ex3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -213,7 +209,10 @@ namespace Collections
             students.Add(new Student { Nume = "Pavel", Nota = 9, Grupa = "Prof" });
             #endregion
 
-            foreach (var t in students.OrderBy(x => x.Nota).Select(FormatedStudent))
+            var studentiRestantieri = students.Where(x => x.Nota < 5);
+            var studentiRestantieriDinAnul2 = studentiRestantieri.Where(x => x.Grupa.StartsWith("2"));
+
+            foreach (var t in studentiRestantieriDinAnul2.Select(x => x.Nume + " " + x.Grupa + "    Nota:" + x.Nota))
             {
                 Console.WriteLine(t);
             }
