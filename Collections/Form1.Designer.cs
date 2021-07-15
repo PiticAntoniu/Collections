@@ -35,6 +35,7 @@ namespace Collections
             this.linqOnArraysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderByOnStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filtersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@ namespace Collections
             // 
             this.linqOnArraysToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.orderByToolStripMenuItem,
-            this.orderByOnStudentsToolStripMenuItem});
+            this.orderByOnStudentsToolStripMenuItem,
+            this.filtersToolStripMenuItem});
             this.linqOnArraysToolStripMenuItem.Name = "linqOnArraysToolStripMenuItem";
             this.linqOnArraysToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.linqOnArraysToolStripMenuItem.Text = "Linq on arrays";
@@ -92,6 +94,13 @@ namespace Collections
             this.orderByOnStudentsToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.orderByOnStudentsToolStripMenuItem.Text = "OrderBy on Students";
             this.orderByOnStudentsToolStripMenuItem.Click += new System.EventHandler(this.orderByOnStudentsToolStripMenuItem_Click);
+            // 
+            // filtersToolStripMenuItem
+            // 
+            this.filtersToolStripMenuItem.Name = "filtersToolStripMenuItem";
+            this.filtersToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.filtersToolStripMenuItem.Text = "Filters on int array";
+            this.filtersToolStripMenuItem.Click += new System.EventHandler(this.filtersToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -120,6 +129,7 @@ namespace Collections
         private System.Windows.Forms.ToolStripMenuItem linqOnArraysToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderByToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderByOnStudentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filtersToolStripMenuItem;
     }
 }
 

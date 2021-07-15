@@ -68,7 +68,7 @@ namespace Collections
         {
             int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            foreach (int x in a.OrderByDescending( x => x )) // f
+            foreach (int x in a.OrderByDescending(x => x)) // f
             {
                 Console.WriteLine(x);
             }
@@ -84,23 +84,53 @@ namespace Collections
                 new Student{Nume="Dorel", Nota = 7}
             };
 
-            foreach (Student student in students.OrderBy( x => x.Nume )) 
+            foreach (Student student in students.OrderBy(x => x.Nume))
             {
                 Console.WriteLine(student.Nume + " " + student.Nota);
             }
 
-            foreach (Student student in students.OrderByDescending(x => x.Nota)) 
+            foreach (Student student in students.OrderByDescending(x => x.Nota))
             {
                 Console.WriteLine(student.Nume + " " + student.Nota);
             }
 
             var sortedStudents = students.OrderBy(x => x.Nota).OrderByDescending(x => x.Nume);
-            foreach (Student student in sortedStudents) 
+            foreach (Student student in sortedStudents)
             {
                 Console.WriteLine(student.Nume + " " + student.Nota);
             }
 
         }
 
+        private void filtersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            foreach (int elem in a.Where(f))
+            {
+                Console.WriteLine(elem);
+            }
+
+            foreach (int elem in a.Where(Prim))
+            {
+                Console.WriteLine(elem);
+            }
+
+
+        }
+
+        private bool Prim(int n)
+        {
+            for(int d = 2; d <= n / 2; d++)
+            {
+                if (n % d == 0) return false;
+            }
+            return true;
+        }
+
+        private bool f(int arg)
+        {
+            return arg % 2 == 0;
+        }
     }
 }
